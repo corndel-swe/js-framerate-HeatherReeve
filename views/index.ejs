@@ -13,10 +13,10 @@
 <body>
    <h1>FrameRate</h1>
    <ul class="movie-list">
-      <% for (let movie of movies) { %>g
+      <% for (let movie of movies) { %>
 
          <li class="movie-list__movie">
-            <a href="/movies.ejs">
+            <a  href="/movie/<%= movie.id %>">
                <h2 class="movie-list__title">
                   <%= movie.title %>
                </h2>

@@ -12,9 +12,13 @@ const movies = await Movie.findAll()
 res.render('index', {movies})
 })
 
-app.get('/movie/:movieID', async (req, res) =>{
-    const movieID = req.params.movieID
-    
-})
+app.get('/movie/:movieId', async (req, res) => {
+    const movieId = req.params.movieId
+  
+    const movie = await Movie.findById(movieId)
+    const reviews = await Movie.findReviews(movieId)
+  
+    res.render('movie', { movie, reviews })
+  })
 
 export default app
