@@ -1,1 +1,45 @@
 /* TODO: Add your styles here */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white
+  }
+  h1{ 
+    color:black
+  }
+  
+  .movie-list {
+    padding: 0;
+    list-style-type: none;
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    color: white;
+    font-style: normal;
+  }
+
+
+  
+  .movie-list__movie {
+    background-color: #e0dd19;
+    width: 10em;
+    padding: 1em;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+  }
+  
+  .movie-list__title {
+    margin-top: 0;
+    
+  }
+  
+  .movie-list__release-date {
+    margin-bottom: 0;
+    font-style: normal;  
+    font-weight: lighter;
+    font-style: normal;
+  }
