@@ -15,8 +15,8 @@ res.render('index', {movies})
 app.get('/movie/:movieId', async (req, res) => {
     const movieId = req.params.movieId
   
-    const movie = await Movie.findById(movieId)
-    const reviews = await Movie.findReviews(movieId)
+    const movie = await movie.findById(movieId)
+    const reviews = await movie.findReviews(movieId)
   
     res.render('movie', { movie, reviews })
   })
