@@ -1,6 +1,7 @@
 import db from '../db/index.js'
 
 class Movie {
+  
   static allowedGenres = [
     'Adventure',
     'Action',
@@ -48,6 +49,14 @@ class Movie {
     const results = await db.raw(query, [id])
     return results
   }
+  static async addReview(id, payload) {
+    const query =
+      'insert into reviews (movieId, content, rating) values (?, ?, ?) returning *;'
+    const result = await db.raw(query, [id, payload.content, payload.rating])
+    return result
+  }
+  
 }
+
 
 export default Movie
